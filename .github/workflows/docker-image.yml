@@ -16,6 +16,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write  # 关键权限，允许提交依赖关系图
 
     steps:
     - uses: actions/checkout@v3
