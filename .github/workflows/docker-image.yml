@@ -32,8 +32,9 @@ jobs:
             fi
             
             # 设置Java环境
-            sudo apt-get update -y
-            sudo apt-get install -y openjdk-17-jdk maven
+            # 安装必要的软件
+            sudo yum update -y
+            sudo yum install -y git java-17-openjdk-devel maven
             
             # 构建项目
             mvn clean package -DskipTests
